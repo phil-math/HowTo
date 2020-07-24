@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">  
+  <title>Carousel Scrollable</title>
+</head>
+<body>
+
+  <div id="items-wrapper">
+    <div id="items">
+      <div class="item"><img src="https://external-preview.redd.it/l8ROEqogi4OcuU7GHwoh9GUHFeslEXIfPRdTDTfL4g4.png?auto=webp&s=4e8f6c8f2f04762db3378d1ce0489f5e15e82ac0" alt="Montains" width="1600" height="400"/></div>
+      <div class="item"><img src="https://i.redd.it/87qft1yjt4431.jpg" alt="maps" width="1600" height="400"/></div>
+      <div class="item"><img src="https://i.pinimg.com/originals/f9/2b/2c/f92b2c7ac68489443445594013ce0a69.jpg" alt="acient city" width="1600" height="400"/></div>
+      <div class="item"><img src="https://2.bp.blogspot.com/-CtifMhqIGZY/TovNlNS2O5I/AAAAAAAAANM/jaqXSqRljlw/s1600/Dragonrider-process.jpg" alt="Shadow process" width="1600" height="400"/></div>
+      <div class="item"><img src="https://3.bp.blogspot.com/-qAsKwBVyPyo/WNEvRWGikrI/AAAAAAAAMVo/RqF_RH47TcAitsNZssvRjxvECLemfYbtwCLcB/s1600/diablo%2B2.jpg" alt="maps" width="1600" height="400"/></div>
+      <div class="item"><img src="https://img.itch.zone/aW1hZ2UyL3VzZXIvMjYwODg2LzExNjYwNDMucG5n/original/vfHnKB.png" alt="maps" width="1600" height="400"/></div>
+      <div class="item"><img src="https://www.dmsguild.com/images/8957/_product_images/309464/patreon_banner.png" alt="maps" width="1600" height="400"/></div>
+    </div>
+  </div>  
+
+  <script>
+    document.getElementById("items").addEventListener("wheel", event=>{
+      if(event.deltaY > 0){
+        console.log(event)
+        event.target.scrollBy(event.target.offsetWidth,0)
+      }else{
+        console.log(event)
+        event.target.scrollBy(-event.target.offsetWidth,0)
+      }
+    })
+  </script>
+
+</body>
+</html>
